@@ -15,6 +15,23 @@
   <%= @pet.birthdate %>
 </p>
 
+<table>
+  <thead>
+    <tr>
+      <th>Weigth</th>
+      <th>Height</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <% @pet.pet_histories.each do |history| %>
+        <td><%= history.weight %></td>
+        <td><%= history.heigth %></td>
+      <% end %>
+    </tr>
+  </tbody>
+</table>
 
 <table>
   <thead>
