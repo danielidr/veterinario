@@ -24,22 +24,22 @@
   </thead>
 
   <tbody>
-    <tr>
       <% @pet.pet_histories.each do |history| %>
+        <tr>
         <td><%= history.weight %></td>
         <td><%= history.heigth %></td>
+        </tr>
       <% end %>
-    </tr>
   </tbody>
 </table>
 
 <table>
   <thead>
     <tr>
-      <th>Peso promedio</th>
-      <th>Altura promedio</th>
-      <th>Peso Máximo</th>
-      <th>Altura Máxima</th>
+      <th>Average weight</th>
+      <th>Average height</th>
+      <th>Max weight</th>
+      <th>Max height</th>
     </tr>
   </thead>
 
