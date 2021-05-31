@@ -15,43 +15,46 @@
   <%= @pet.birthdate %>
 </p>
 
-<table>
-  <thead>
-    <tr>
-      <th>Weigth</th>
-      <th>Height</th>
-    </tr>
-  </thead>
+<div class="container row">
+  <table class="table mt-4 col-3">
+    <thead class="thead-dark">
+      <tr>
+        <th>Weigth</th>
+        <th>Height</th>
+      </tr>
+    </thead>
 
-  <tbody>
-      <% @pet.pet_histories.each do |history| %>
-        <tr>
-        <td><%= history.weight %></td>
-        <td><%= history.heigth %></td>
-        </tr>
-      <% end %>
-  </tbody>
-</table>
+    <tbody>
+        <% @pet.pet_histories.each do |history| %>
+          <tr>
+          <td><%= history.weight %></td>
+          <td><%= history.heigth %></td>
+          </tr>
+        <% end %>
+    </tbody>
+  </table>
 
-<table>
-  <thead>
-    <tr>
-      <th>Average weight</th>
-      <th>Average height</th>
-      <th>Max weight</th>
-      <th>Max height</th>
-    </tr>
-  </thead>
+  <table class="table mt-4 col-9">
+    <thead class="thead-dark">
+      <tr>
+        <th>Average weight</th>
+        <th>Average height</th>
+        <th>Max weight</th>
+        <th>Max height</th>
+      </tr>
+    </thead>
 
-  <tbody>
-    <tr>
-      <td><%= @pet.avg_weight %></td>
-      <td><%= @pet.avg_height %></td>
-      <td><%= @pet.max_weight %></td>
-      <td><%= @pet.max_height%></td>
-    </tr>
-  </tbody>
-</table>
+    <tbody>
+      <tr>
+        <td><%= @pet.avg_weight %></td>
+        <td><%= @pet.avg_height %></td>
+        <td><%= @pet.max_weight %></td>
+        <td><%= @pet.max_height%></td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
 
 <%= link_to 'Edit', edit_pet_path(@pet) %> |
 <%= link_to 'Back', pets_path %>

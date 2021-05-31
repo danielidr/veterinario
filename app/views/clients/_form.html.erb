@@ -11,19 +11,21 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
-  </div>
+  <div class="container row my-4">
+    <div class="form-group col-4">
+      <%= form.label :name %>
+      <%= form.text_field :name, class: "form-control" %>
+    </div>
 
-  <div class="field">
-    <%= form.label :phone_number %>
-    <%= form.text_field :phone_number %>
-  </div>
+    <div class="form-group col-4">
+      <%= form.label :phone_number %>
+      <%= form.text_field :phone_number, class: "form-control" %>
+    </div>
 
-  <div class="field">
-    <%= form.label :email %>
-    <%= form.text_field :email %>
+    <div class="form-group col-4">
+      <%= form.label :email %>
+      <%= form.text_field :email, class: "form-control" %>
+    </div>
   </div>
 
   <div class="actions">

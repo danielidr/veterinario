@@ -3,11 +3,14 @@ class Pet < ApplicationRecord
   has_many :pet_histories
   belongs_to :client
 
+  validates_presence_of :name
+
   def history_count
     pet_histories.count
   end
 
   def avg_weight
+    return if pet_histories.count == 0
     w = 0
     suma = 0
     pet_histories.each do |history|
@@ -18,6 +21,7 @@ class Pet < ApplicationRecord
   end
 
   def avg_height
+    return if pet_histories.count == 0
     h = 0
     suma = 0
     pet_histories.each do |history|
